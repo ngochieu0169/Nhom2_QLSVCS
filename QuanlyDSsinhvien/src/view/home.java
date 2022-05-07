@@ -29,9 +29,6 @@ public class home extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jTabbedPane1 = new javax.swing.JTabbedPane();
-        jPanel2 = new javax.swing.JPanel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
         jPanel3 = new javax.swing.JPanel();
         textboxsearch = new javax.swing.JTextField();
         jLabel27 = new javax.swing.JLabel();
@@ -40,9 +37,6 @@ public class home extends javax.swing.JFrame {
         jLabel28 = new javax.swing.JLabel();
         jScrollPane5 = new javax.swing.JScrollPane();
         tableSearchSach = new javax.swing.JTable();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
@@ -51,39 +45,16 @@ public class home extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jPasswordField1 = new javax.swing.JPasswordField();
+        jPanel2 = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        jPanel2.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-
-        jTextArea1.setColumns(20);
-        jTextArea1.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
-        jTextArea1.setRows(5);
-        jTextArea1.setText("Giúp cho trường đại học Sư Phạm Kỹ Thuật quản lý được thông tin các sinh viên thuộc diện chính sách một cách nhanh chóng và dễ dàng.\nGiúp các bạn sinh viên đăng ký diện chính sách không còn gặp nhiều rắc rối về việc giấy tờ khi phải chờ trong thời gian lâu.\nTránh tình trạng thất lạc giấy tờ giữa nhà trường và sinh viên.\n\t\t----------------------------------------------------------------------------------\n>Đối tượng sinh viên được miễn 100%  học phí:\n          Con của liệt sỹ, thương binh, bệnh binh; con của người hoạt động kháng chiến bị chất độc màu da cam.\n          Sinh viên bị tàn tật, khuyết tật thuộc diện cận nghèo hoặc hộ nghèo.\n          Sinh viên hệ cử tuyển.\n          Sinh viên là người dân tộc thiểu số thuộc hộ nghèo và hộ cận nghèo theo quy định của Thủ tướng Chính phủ phê duyệt theo từng thời kỳ.\n          Sinh viên người dân tộc thiểu số rất ít người ở vùng có điều kiện kinh tế-xã hội khó khăn hoặc đặc biệt khó khăn.\n>Đối tượng sinh viên được miễn 70% học phí:\n          Sinh viên là người dân tộc thiểu số có điều kiện kinh tế xã hội đặc biệt khó khăn theo quy định của cơ quan nhà nước có thẩm quyền. Cụ thể:\n            + Người dân tộc thiểu số (không phải là người dân tộc thiểu số rất ít người)\n            + Vùng có điều kiện kinh tế xã hội đặc biệt khó khăn được quy định tại phụ lục I kèm theo Thông tư liên tịch số 09/TTLT- BGD ĐT-BTC- BLĐTBXH\n (trừ các vùng có điều kiện kinh tế- xã hội khó khăn)\n>Đối tượng sinh viên được giảm 50% học phí:\n          Sinh viên là con cán bộ, công nhân, viên chức mà cha hoặc mẹ bị tai nạn lao động hoặc mắc bệnh nghề nghiệp được hưởng trợ cấp thường xuyên.\n>Đối tượng  sinh viên được hưởng trợ cấp xã hội:\n          Sinh viên là người dân tộc ít người ở vùng cao.\n          Sinh viên mồ côi cả cha lẫn mẹ không nơi nương tựa.\n          Sinh viên tàn tật theo quy định của Nhà nước và gặp khó khăn về kinh tế, khả năng lao động bị suy giảm từ 41% trở lên.\n          Sinh viên có hoàn cảnh đặc biệt khó khăn về kinh tế, vượt khó học tập là những người mà gia đình thuộc diện xóa đói giảm nghèo.\nLink tham khảo thêm các mẫu hướng dẫn và mẫu đơn đăng ký diện chính sách của trường đại học Sư Phạm Kỹ Thuật:\n https://drive.google.com/drive/folders/1YEF7_6B0MTCW-w5sB42IHlk2aJ6LwxsG?usp=sharing\n");
-        jTextArea1.setMaximumSize(new java.awt.Dimension(32767, 32767));
-        jTextArea1.setMinimumSize(new java.awt.Dimension(100, 80));
-        jScrollPane1.setViewportView(jTextArea1);
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1055, Short.MAX_VALUE)
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 497, Short.MAX_VALUE))
-        );
-
-        jTabbedPane1.addTab("GIỚI THIỆU", new javax.swing.ImageIcon(getClass().getResource("/image/contact-list.png")), jPanel2); // NOI18N
 
         jPanel3.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
 
@@ -133,11 +104,11 @@ public class home extends javax.swing.JFrame {
 
             },
             new String [] {
-                "STT", "Mã sv", "Họ Tên", "Ngày sinh", "Lớp", "Khoa", "Ngày xét duyệt", "Diện chính sách"
+                "STT", "Mã sv", "Họ Tên", "Ngày sinh", "Lớp", "Khoa", "Ngày xét duyệt", "Diện chính sách", "Tình trạng"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Byte.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class
+                java.lang.Byte.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -145,18 +116,6 @@ public class home extends javax.swing.JFrame {
             }
         });
         jScrollPane5.setViewportView(tableSearchSach);
-
-        jButton3.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/plus.png"))); // NOI18N
-        jButton3.setText("THÊM");
-
-        jButton4.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/sua.png"))); // NOI18N
-        jButton4.setText("SỬA");
-
-        jButton5.setFont(new java.awt.Font("Times New Roman", 1, 13)); // NOI18N
-        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/logout.png"))); // NOI18N
-        jButton5.setText("THOÁT");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -178,14 +137,7 @@ public class home extends javax.swing.JFrame {
                         .addComponent(jButton11, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGap(62, 62, 62)
-                        .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 913, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(260, 260, 260)
-                        .addComponent(jButton3)
-                        .addGap(99, 99, 99)
-                        .addComponent(jButton4)
-                        .addGap(81, 81, 81)
-                        .addComponent(jButton5)))
+                        .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 913, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(80, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
@@ -196,18 +148,13 @@ public class home extends javax.swing.JFrame {
                     .addComponent(textboxsearch, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel27)
                     .addComponent(jButton11))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 47, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel28)
                     .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(33, 33, 33)
                 .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 242, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton3)
-                    .addComponent(jButton4)
-                    .addComponent(jButton5))
-                .addGap(11, 11, 11))
+                .addGap(65, 65, 65))
         );
 
         jTabbedPane1.addTab("HOME", new javax.swing.ImageIcon(getClass().getResource("/image/navigator.png")), jPanel3); // NOI18N
@@ -231,11 +178,13 @@ public class home extends javax.swing.JFrame {
         jLabel9.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel9.setText("MẬT KHẨU");
 
-        jButton1.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        jButton1.setText("EXIT");
-
         jButton2.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jButton2.setText("ĐĂNG NHẬP");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -250,24 +199,18 @@ public class home extends javax.swing.JFrame {
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addGap(61, 61, 61)
                 .addComponent(jLabel4)
+                .addGap(61, 61, 61)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addGap(61, 61, 61)
-                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel8)
-                            .addComponent(jLabel9))
-                        .addGap(70, 70, 70)
-                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel5)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 270, Short.MAX_VALUE)
-                            .addComponent(jPasswordField1))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton2)
-                        .addGap(151, 151, 151)
-                        .addComponent(jButton1)
-                        .addGap(207, 207, 207))))
+                    .addComponent(jLabel8)
+                    .addComponent(jLabel9))
+                .addGap(70, 70, 70)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(jLabel5)
+                        .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 270, Short.MAX_VALUE)
+                        .addComponent(jPasswordField1))
+                    .addComponent(jButton2))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -292,13 +235,36 @@ public class home extends javax.swing.JFrame {
                             .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jButton2)
-                            .addComponent(jButton1))))
+                        .addComponent(jButton2)))
                 .addContainerGap(93, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("ĐĂNG NHẬP", new javax.swing.ImageIcon(getClass().getResource("/image/login.png")), jPanel4); // NOI18N
+
+        jPanel2.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+
+        jTextArea1.setColumns(20);
+        jTextArea1.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        jTextArea1.setRows(5);
+        jTextArea1.setText("Giúp cho trường đại học Sư Phạm Kỹ Thuật quản lý được thông tin các sinh viên thuộc diện chính sách một cách nhanh chóng và dễ dàng.\nGiúp các bạn sinh viên đăng ký diện chính sách không còn gặp nhiều rắc rối về việc giấy tờ khi phải chờ trong thời gian lâu.\nTránh tình trạng thất lạc giấy tờ giữa nhà trường và sinh viên.\n\t\t----------------------------------------------------------------------------------\n>Đối tượng sinh viên được miễn 100%  học phí:\n          Con của liệt sỹ, thương binh, bệnh binh; con của người hoạt động kháng chiến bị chất độc màu da cam.\n          Sinh viên bị tàn tật, khuyết tật thuộc diện cận nghèo hoặc hộ nghèo.\n          Sinh viên hệ cử tuyển.\n          Sinh viên là người dân tộc thiểu số thuộc hộ nghèo và hộ cận nghèo theo quy định của Thủ tướng Chính phủ phê duyệt theo từng thời kỳ.\n          Sinh viên người dân tộc thiểu số rất ít người ở vùng có điều kiện kinh tế-xã hội khó khăn hoặc đặc biệt khó khăn.\n>Đối tượng sinh viên được miễn 70% học phí:\n          Sinh viên là người dân tộc thiểu số có điều kiện kinh tế xã hội đặc biệt khó khăn theo quy định của cơ quan nhà nước có thẩm quyền. Cụ thể:\n            + Người dân tộc thiểu số (không phải là người dân tộc thiểu số rất ít người)\n            + Vùng có điều kiện kinh tế xã hội đặc biệt khó khăn được quy định tại phụ lục I kèm theo Thông tư liên tịch số 09/TTLT- BGD ĐT-BTC- BLĐTBXH\n (trừ các vùng có điều kiện kinh tế- xã hội khó khăn)\n>Đối tượng sinh viên được giảm 50% học phí:\n          Sinh viên là con cán bộ, công nhân, viên chức mà cha hoặc mẹ bị tai nạn lao động hoặc mắc bệnh nghề nghiệp được hưởng trợ cấp thường xuyên.\n>Đối tượng  sinh viên được hưởng trợ cấp xã hội:\n          Sinh viên là người dân tộc ít người ở vùng cao.\n          Sinh viên mồ côi cả cha lẫn mẹ không nơi nương tựa.\n          Sinh viên tàn tật theo quy định của Nhà nước và gặp khó khăn về kinh tế, khả năng lao động bị suy giảm từ 41% trở lên.\n          Sinh viên có hoàn cảnh đặc biệt khó khăn về kinh tế, vượt khó học tập là những người mà gia đình thuộc diện xóa đói giảm nghèo.\nLink tham khảo thêm các mẫu hướng dẫn và mẫu đơn đăng ký diện chính sách của trường đại học Sư Phạm Kỹ Thuật:\n https://drive.google.com/drive/folders/1YEF7_6B0MTCW-w5sB42IHlk2aJ6LwxsG?usp=sharing\n");
+        jTextArea1.setMaximumSize(new java.awt.Dimension(32767, 32767));
+        jTextArea1.setMinimumSize(new java.awt.Dimension(100, 80));
+        jScrollPane1.setViewportView(jTextArea1);
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1055, Short.MAX_VALUE)
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 497, Short.MAX_VALUE))
+        );
+
+        jTabbedPane1.addTab("GIỚI THIỆU", new javax.swing.ImageIcon(getClass().getResource("/image/contact-list.png")), jPanel2); // NOI18N
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/logo-truong-250.png"))); // NOI18N
 
@@ -336,7 +302,7 @@ public class home extends javax.swing.JFrame {
                         .addComponent(jLabel3))
                     .addComponent(jLabel1))
                 .addGap(18, 18, 18)
-                .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 588, Short.MAX_VALUE))
+                .addComponent(jTabbedPane1))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -376,6 +342,12 @@ public class home extends javax.swing.JFrame {
 
     }//GEN-LAST:event_jComboBox3ItemStateChanged
 
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        new admin().setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jButton2ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -413,12 +385,8 @@ public class home extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
     private javax.swing.JComboBox<String> jComboBox3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
