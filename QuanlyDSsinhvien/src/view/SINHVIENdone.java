@@ -5,11 +5,15 @@
  */
 package view;
 
+import Service.SinhVienService;
+
 /**
  *
  * @author Admin
  */
 public class SINHVIENdone extends javax.swing.JFrame {
+    SinhVienService sinhVienService;
+    
 
     /**
      * Creates new form SINHVIENdone
@@ -65,7 +69,7 @@ public class SINHVIENdone extends javax.swing.JFrame {
                 {null, null, null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "MÃ SV", "HỌ TÊN", "LỚP SINH HOẠT", "KHOA", "SĐT", "EMAIL", "ĐỐI TƯỢNG", "Tình trạng", "NĂM HỌC", "GHI CHÚ"
+                "MÃ SV", "HỌ TÊN", "LỚP SINH HOẠT", "GIỚI TÍNH", "KHOA", "SĐT", "EMAIL", "ĐỐI TƯỢNG", "NĂM HỌC", "GHI CHÚ"
             }
         ));
         jScrollPane1.setViewportView(jTable1);

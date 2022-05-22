@@ -99,11 +99,11 @@
                         <Column editable="true" title="M&#xc3; SV" type="java.lang.Object"/>
                         <Column editable="true" title="H&#x1ecc; T&#xca;N" type="java.lang.Object"/>
                         <Column editable="true" title="L&#x1eda;P SINH HO&#x1ea0;T" type="java.lang.Object"/>
+                        <Column editable="true" title="GI&#x1eda;I T&#xcd;NH" type="java.lang.Object"/>
                         <Column editable="true" title="KHOA" type="java.lang.Object"/>
                         <Column editable="true" title="S&#x110;T" type="java.lang.Object"/>
                         <Column editable="true" title="EMAIL" type="java.lang.Object"/>
                         <Column editable="true" title="&#x110;&#x1ed0;I T&#x1af;&#x1ee2;NG" type="java.lang.Object"/>
-                        <Column editable="true" title="T&#xec;nh tr&#x1ea1;ng" type="java.lang.Object"/>
                         <Column editable="true" title="N&#x102;M H&#x1ecc;C" type="java.lang.Object"/>
                         <Column editable="true" title="GHI CH&#xda;" type="java.lang.Object"/>
                       </Table>

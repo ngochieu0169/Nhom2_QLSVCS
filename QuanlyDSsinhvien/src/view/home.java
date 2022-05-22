@@ -5,17 +5,52 @@
  */
 package view;
 
+import Model.SinhVien;
+import Service.SinhVienService;
+import java.util.List;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author Admin
  */
 public class home extends javax.swing.JFrame {
-
+    SinhVienService sinhVienService;
+    DefaultTableModel defaultTableModel;
     /**
      * Creates new form home
      */
     public home() {
         initComponents();
+        sinhVienService = new SinhVienService();
+
+        
+        defaultTableModel = new DefaultTableModel(){
+            @Override
+            public boolean isCellEditable(int row, int column) {
+                return false;
+            } 
+        };
+        table_SinhVien1.setModel(defaultTableModel);
+        
+        defaultTableModel.addColumn("maSV");
+        defaultTableModel.addColumn("tenSV");
+        defaultTableModel.addColumn("lopSH");
+        defaultTableModel.addColumn("gioiTinh");
+        defaultTableModel.addColumn("Khoa");
+        defaultTableModel.addColumn("SDT");
+        defaultTableModel.addColumn("eMail");
+        defaultTableModel.addColumn("doiTuong");
+        
+        
+        
+        setBookTableData(sinhVienService.getAllSinhVien());
+    }
+    private void setBookTableData(List<SinhVien> sinhVien_l){
+        for(SinhVien sv : sinhVien_l){
+            defaultTableModel.addRow(new Object[]{sv.getMaSV(), sv.getTenSV(), sv.getSDT(), sv.getLopSH()});
+        }
     }
 
     /**
@@ -36,7 +71,7 @@ public class home extends javax.swing.JFrame {
         jComboBox3 = new javax.swing.JComboBox<>();
         jLabel28 = new javax.swing.JLabel();
         jScrollPane5 = new javax.swing.JScrollPane();
-        tableSearchSach = new javax.swing.JTable();
+        table_SinhVien1 = new javax.swing.JTable();
         jPanel4 = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
@@ -99,24 +134,16 @@ public class home extends javax.swing.JFrame {
         jLabel28.setForeground(new java.awt.Color(51, 51, 255));
         jLabel28.setText("Lọc theo danh mục:");
 
-        tableSearchSach.setFont(new java.awt.Font("Times New Roman", 0, 20)); // NOI18N
-        tableSearchSach.setModel(new javax.swing.table.DefaultTableModel(
+        table_SinhVien1.setFont(new java.awt.Font("Times New Roman", 0, 20)); // NOI18N
+        table_SinhVien1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
             new String [] {
-                "STT", "Mã sv", "Họ Tên", "Ngày sinh", "Lớp", "Khoa", "Ngày xét duyệt", "Diện chính sách", "Tình trạng"
+                "Mã sv", "Họ Tên", "Ngày sinh", "Lớp", "Khoa", "Ngày xét duyệt", "Diện chính sách", "Tình trạng"
             }
-        ) {
-            Class[] types = new Class [] {
-                java.lang.Byte.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class
-            };
-
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
-            }
-        });
-        jScrollPane5.setViewportView(tableSearchSach);
+        ));
+        jScrollPane5.setViewportView(table_SinhVien1);
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -428,7 +455,7 @@ public class home extends javax.swing.JFrame {
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextField jTextField1;
-    private javax.swing.JTable tableSearchSach;
+    private javax.swing.JTable table_SinhVien1;
     private javax.swing.JTextField textboxsearch;
     // End of variables declaration//GEN-END:variables
 }
