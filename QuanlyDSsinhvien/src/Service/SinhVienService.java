@@ -38,4 +38,9 @@ public class SinhVienService {
     public void updateSinhVien(SinhVien sv){
         sinhVienDao.updateSinhVien(sv);
     }
+    
+      public List<SinhVien> getfindSVById(String maSV){
+        return sinhVienDao.getfindSVById(maSV);        
+      }
+    
 }

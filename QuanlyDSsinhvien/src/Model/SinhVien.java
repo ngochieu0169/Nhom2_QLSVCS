@@ -16,6 +16,7 @@ public class SinhVien {
      private String Khoa;
     private String SDT;
     private String eMail;
+    private String ngaySinh;
     private String doiTuong;
     private String namHoc;
     private String ghiChu;
@@ -32,13 +33,14 @@ public class SinhVien {
         return lopSH;
     }
 
+    public String getKhoa() {
+        return Khoa;
+    }
     public String getGioiTinh() {
         return gioiTinh;
     }
 
-    public String getKhoa() {
-        return Khoa;
-    }
+    
 
     public String getSDT() {
         return SDT;
@@ -60,6 +62,11 @@ public class SinhVien {
         return ghiChu;
     }
 
+    public String getNgaySinh() {
+        return ngaySinh;
+    }
+    
+
     public void setMaSV(String maSV) {
         this.maSV = maSV;
     }
@@ -72,14 +79,15 @@ public class SinhVien {
         this.lopSH = lopSH;
     }
 
-    public void setGioiTinh(String gioiTinh) {
-        this.gioiTinh = gioiTinh;
-    }
-
     public void setKhoa(String Khoa) {
         this.Khoa = Khoa;
     }
 
+    public void setGioiTinh(String gioiTinh) {
+        this.gioiTinh = gioiTinh;
+    }
+
+    
     public void setSDT(String SDT) {
         this.SDT = SDT;
     }
@@ -99,21 +107,26 @@ public class SinhVien {
     public void setGhiChu(String ghiChu) {
         this.ghiChu = ghiChu;
     }
+
+    public void setNgaySinh(String ngaySinh) {
+        this.ngaySinh = ngaySinh;
+    }
     
     public SinhVien() {
     }
 
-    public SinhVien(String maSV, String tenSV, String lopSH, String gioiTinh, String Khoa, String SDT, String eMial, String doiTuong, String namHoc, String ghiChu) {
+    public SinhVien(String maSV, String tenSV, String lopSH, String gioiTinh, String Khoa, String SDT, String eMial, String doiTuong, String namHoc, String ghiChu, String ngaySinh) {
         this.maSV = maSV;
         this.tenSV = tenSV;
         this.lopSH = lopSH;
-        this.gioiTinh = gioiTinh;
-        this.Khoa = Khoa;
+         this.Khoa = Khoa;
+        this.gioiTinh = gioiTinh;   
         this.SDT = SDT;
         this.eMail = eMial;
         this.doiTuong = doiTuong;
         this.namHoc = namHoc;
         this.ghiChu = ghiChu;
+        this.ngaySinh = ngaySinh;
     }
     
    

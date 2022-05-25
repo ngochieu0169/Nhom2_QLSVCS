@@ -81,6 +81,11 @@ public class signup extends javax.swing.JFrame {
 
         jBt_DangNhap.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jBt_DangNhap.setText("ĐĂNG NHẬP");
+        jBt_DangNhap.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBt_DangNhapActionPerformed(evt);
+            }
+        });
 
         jLabel8.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel8.setText("HỌ TÊN:");
@@ -213,6 +218,12 @@ public class signup extends javax.swing.JFrame {
             Logger.getLogger(signup.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_jBt_DangKiActionPerformed
+
+    private void jBt_DangNhapActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBt_DangNhapActionPerformed
+        // TODO add your handling code here:
+        new home().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jBt_DangNhapActionPerformed
 
     /**
      * @param args the command line arguments
