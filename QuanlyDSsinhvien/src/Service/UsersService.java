@@ -20,7 +20,7 @@ public class UsersService {
     }
     
     public List<Users> getAllUsers(){
-        return uSersDao.getAllUsersDao();
+        return uSersDao.getAllUsers();
     }
     
     public void addUsers(Users use){

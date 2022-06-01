@@ -10,13 +10,14 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
+import javax.swing.JOptionPane;
 
 /**
  *
  * @author DOAN NGOC HIEU
  */
 public class UsersDao {
-    public List<Users> getAllUsersDao() {
+    public List<Users> getAllUsers() {
         List<Users> uSers_1 = new ArrayList<Users>();
 
         Connection connection = DBConnection.getConnection();
@@ -46,13 +47,13 @@ public class UsersDao {
         return uSers_1;
     }
     
-    public Users getUsersDaoById(String maSV) {
+    public Users getUsersDaoById(String tk) {
         
         Connection connection = DBConnection.getConnection();
         String sql = "select * from users where tk = ?";
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
-            preparedStatement.setString(1, maSV);
+            preparedStatement.setString(1, tk);
             ResultSet rs = preparedStatement.executeQuery();
             while (rs.next()) {
                 Users uSers = new Users();
@@ -109,15 +110,21 @@ public class UsersDao {
             preparedStatement.setString(2, uSers.getHoten());
             preparedStatement.setString(3, uSers.getNgaySinh());
             preparedStatement.setString(4, uSers.getCmnd());
-            preparedStatement.setString(5, uSers.geteMail());
-            preparedStatement.setString(6, uSers.getSDT());
-            preparedStatement.setString(7, uSers.getDiachi());
+            
+            preparedStatement.setString(5, uSers.getSDT());
+            preparedStatement.setString(6, uSers.getDiachi());
+            preparedStatement.setString(7, uSers.geteMail());
             preparedStatement.setString(8, uSers.getTenchucvu());
             preparedStatement.setString(9, uSers.getTinhtrang());
             preparedStatement.setString(10, uSers.getNgaydangki());            
             preparedStatement.setString(11, uSers.getTk());
             int rs = preparedStatement.executeUpdate();
             System.out.println(rs);
+              if(rs>0)
+                 JOptionPane.showMessageDialog(null, "Sửa thành công ");
+             else{
+                 JOptionPane.showMessageDialog(null, "Sai Mã sinh viên");
+             }
         } catch (Exception e) {
             e.printStackTrace();
         }

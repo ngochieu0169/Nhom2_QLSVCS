@@ -111,6 +111,38 @@ public class SinhVienDao {
         }
         return sinhVien_l;
     }
+    
+        public List<SinhVien> getfindSVByDT(String doiTuong) {
+        List<SinhVien> sinhVien_l = new ArrayList<SinhVien>();
+        Connection connection = DBConnection.getConnection();
+        String sql = "select * from SinhVien where doiTuong like N'%"+doiTuong+"%'";
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+           
+            ResultSet rs = preparedStatement.executeQuery();
+            
+            while (rs.next()) {
+                SinhVien sinhVien = new SinhVien();
+                
+                sinhVien.setMaSV(rs.getString(1));
+                sinhVien.setTenSV(rs.getString(2));
+                sinhVien.setLopSH(rs.getString(3));
+                sinhVien.setKhoa(rs.getString(4));
+                sinhVien.setGioiTinh(rs.getString(5));             
+                sinhVien.setSDT(rs.getString(6));
+                sinhVien.seteMail(rs.getString(7));
+                sinhVien.setNgaySinh(rs.getString(8));
+                sinhVien.setDoiTuong(rs.getString(9));
+                sinhVien.setNamHoc(rs.getString(10));            
+                sinhVien.setGhiChu(rs.getString(11));
+                
+                sinhVien_l.add(sinhVien);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return sinhVien_l;
+    }
 
     public void addSV(SinhVien sinhVien) {
         Connection connection = DBConnection.getConnection();
@@ -139,7 +171,7 @@ public class SinhVienDao {
     public void updateSinhVien(SinhVien sinhVien){
         int rs = 0;
         Connection connection = DBConnection.getConnection();
-        String sql = "UPDATE SinhVien SET tenSV = ? , lopSH = ? , gioiTinh = ?, Khoa = ?, SDT = ?, eMail = ?, ngaySinh = ?,doiTuong = ?, namHoc= ?, ghiChu=? "
+        String sql = "UPDATE SinhVien SET tenSV = ? , lopSH = ? , Khoa = ?, SDT = ?, eMail = ?, doiTuong = ?, namHoc= ?, ghiChu=? "
                 + "  where maSV = ? ";
         try {
             PreparedStatement st = connection.prepareStatement(sql);
@@ -148,14 +180,14 @@ public class SinhVienDao {
             st.setString(1, sinhVien.getTenSV());
             st.setString(2, sinhVien.getLopSH());            
             st.setString(3, sinhVien.getKhoa());
-            st.setString(4, sinhVien.getGioiTinh());
-            st.setString(5, sinhVien.getSDT());
-            st.setString(6, sinhVien.geteMail());
-            st.setString(7, sinhVien.getNgaySinh()); 
-            st.setString(8, sinhVien.getDoiTuong());
-            st.setString(9, sinhVien.getNamHoc());
-            st.setString(10, sinhVien.getGhiChu());
-            st.setString(11, sinhVien.getMaSV());
+            
+            st.setString(4, sinhVien.getSDT());
+            st.setString(5, sinhVien.geteMail());
+          
+            st.setString(6, sinhVien.getDoiTuong());
+            st.setString(7, sinhVien.getNamHoc());
+            st.setString(8, sinhVien.getGhiChu());
+            st.setString(9, sinhVien.getMaSV());
             
              rs = st.executeUpdate();
              if(rs>0)

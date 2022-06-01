@@ -28,17 +28,17 @@ public class capnhathoso extends javax.swing.JFrame {
     public capnhathoso(String tk) {
        
        usersService = new UsersService();
-        users = new Users();
+     
         users = usersService.getUsersById(tk);
         initComponents();
         
         tk_TextField.setText(users.getTk());
-        ngaysinh_TextField.setText(users.getMk());
+        mk_TextFiel.setText(users.getMk());
         hoten_TextField.setText(users.getHoten());
         ngaysinh_TextField.setText(users.getNgaySinh());
         cmnd_TextField.setText(users.getCmnd());
         sdt_TextField.setText(users.getSDT());
-        email_TextField.setText(users.geteMail());
+      
         diachi_TextField.setText(users.getDiachi());
         email_TextField.setText(users.geteMail());
         chucvu_TextField.setText(users.getTenchucvu());
@@ -77,6 +77,7 @@ public class capnhathoso extends javax.swing.JFrame {
         chucvu_TextField = new javax.swing.JTextField();
         ngaydangki_TextField = new javax.swing.JTextField();
         tk_TextField = new javax.swing.JTextField();
+        mk_TextFiel = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -119,6 +120,8 @@ public class capnhathoso extends javax.swing.JFrame {
         ngaydangki_TextField.setText("jTextField1");
 
         tk_TextField.setText("jTextField4");
+
+        mk_TextFiel.setText("jTextField1");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -172,6 +175,8 @@ public class capnhathoso extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(296, 296, 296)
                 .addComponent(tk_TextField, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(202, 202, 202)
+                .addComponent(mk_TextFiel, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -185,7 +190,9 @@ public class capnhathoso extends javax.swing.JFrame {
                         .addComponent(jLabel3))
                     .addComponent(jLabel1))
                 .addGap(18, 18, 18)
-                .addComponent(tk_TextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(tk_TextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(mk_TextFiel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(27, 27, 27)
                 .addComponent(jLabel4)
                 .addGap(28, 28, 28)
@@ -244,12 +251,13 @@ public class capnhathoso extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        users.setTk(ngaysinh_TextField.getText());
+        users.setTk(tk_TextField.getText());
+        users.setMk(mk_TextFiel.getText());
         users.setMk(hoten_TextField.getText());
         users.setHoten(ngaysinh_TextField.getText());
         users.setNgaySinh(cmnd_TextField.getText());
         users.setCmnd(sdt_TextField.getText());
-        users.setSDT(email_TextField.getText());
+
         users.setDiachi(diachi_TextField.getText());
         users.seteMail(email_TextField.getText());
         users.setTenchucvu(chucvu_TextField.getText());
@@ -316,6 +324,7 @@ public class capnhathoso extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JTextField mk_TextFiel;
     private javax.swing.JTextField ngaydangki_TextField;
     private javax.swing.JTextField ngaysinh_TextField;
     private javax.swing.JTextField sdt_TextField;

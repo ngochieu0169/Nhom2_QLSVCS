@@ -3,6 +3,9 @@
 <Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
+    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+      <Font name="Times New Roman" size="10" style="0"/>
+    </Property>
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
@@ -117,15 +120,13 @@
                           </Group>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
                               <Component id="textboxsearch" pref="353" max="32767" attributes="0"/>
-                              <Component id="jComboBox" max="32767" attributes="0"/>
+                              <Component id="doiTuong_ComboBox" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
                           <Component id="timkiem_Button" min="-2" pref="128" max="-2" attributes="0"/>
                           <EmptySpace pref="355" max="32767" attributes="0"/>
                       </Group>
-                      <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
-                          <Component id="jScrollPane5" alignment="0" pref="1106" max="32767" attributes="0"/>
-                      </Group>
+                      <Component id="jScrollPane2" alignment="0" max="32767" attributes="0"/>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
@@ -137,19 +138,14 @@
                               <Component id="jLabel27" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="timkiem_Button" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="50" max="32767" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="jLabel28" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jComboBox" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
+                              <Component id="doiTuong_ComboBox" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace min="-2" pref="340" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="1" attributes="0">
-                              <EmptySpace pref="217" max="32767" attributes="0"/>
-                              <Component id="jScrollPane5" min="-2" pref="280" max="-2" attributes="0"/>
-                              <EmptySpace max="32767" attributes="0"/>
-                          </Group>
+                          <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
+                          <Component id="jScrollPane2" min="-2" pref="296" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="144" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -187,21 +183,23 @@
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="timkiem_ButtonActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JComboBox" name="jComboBox">
+                <Component class="javax.swing.JComboBox" name="doiTuong_ComboBox">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Times New Roman" size="18" style="0"/>
                     </Property>
                     <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                      <StringArray count="8">
+                      <StringArray count="10">
                         <StringItem index="0" value="H&#x1ed9; ngh&#xe8;o"/>
                         <StringItem index="1" value="H&#x1ed9; c&#x1ead;n ngh&#xe8;o"/>
                         <StringItem index="2" value="Con Th&#x1b0;&#x1a1;ng binh li&#x1ec7;t s&#x129;"/>
-                        <StringItem index="3" value="M&#x1ed3; c&#xf4;i "/>
-                        <StringItem index="4" value="Con Cb,Cn,Vc tai n&#x1ea1;n lao &#x111;&#x1ed9;ng"/>
-                        <StringItem index="5" value="Khuy&#x1ebf;t t&#x1ead;t"/>
-                        <StringItem index="6" value="Ho&#xe0;n c&#x1ea3;nh kh&#xf3; kh&#x1eaf;n"/>
-                        <StringItem index="7" value="D&#xe2;n t&#x1ed9;c thi&#x1ec3;u s&#x1ed1;  "/>
+                        <StringItem index="3" value="M&#x1ed3; c&#xf4;i"/>
+                        <StringItem index="4" value="Con Cb"/>
+                        <StringItem index="5" value="Cn"/>
+                        <StringItem index="6" value="Vc tai n&#x1ea1;n lao &#x111;&#x1ed9;ng"/>
+                        <StringItem index="7" value="Khuy&#x1ebf;t t&#x1ead;t"/>
+                        <StringItem index="8" value="Ho&#xe0;n c&#x1ea3;nh kh&#xf3; kh&#x1eaf;n"/>
+                        <StringItem index="9" value="D&#xe2;n t&#x1ed9;c thi&#x1ec3;u s&#x1ed1;"/>
                       </StringArray>
                     </Property>
                   </Properties>
@@ -220,7 +218,7 @@
                     <Property name="text" type="java.lang.String" value="L&#x1ecd;c theo danh m&#x1ee5;c:"/>
                   </Properties>
                 </Component>
-                <Container class="javax.swing.JScrollPane" name="jScrollPane5">
+                <Container class="javax.swing.JScrollPane" name="jScrollPane2">
                   <AuxValues>
                     <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
                   </AuxValues>
@@ -229,21 +227,38 @@
                   <SubComponents>
                     <Component class="javax.swing.JTable" name="table_SinhVien1">
                       <Properties>
-                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Times New Roman" size="20" style="0"/>
-                        </Property>
                         <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                          <Table columnCount="4" rowCount="0">
-                            <Column editable="true" title="M&#xe3; sv" type="java.lang.Object"/>
+                          <Table columnCount="11" rowCount="4">
+                            <Column editable="true" title="M&#xe3; SV" type="java.lang.Object"/>
                             <Column editable="true" title="H&#x1ecd; T&#xea;n" type="java.lang.Object"/>
-                            <Column editable="true" title="L&#x1edb;p" type="java.lang.Object"/>
-                            <Column editable="true" title="Di&#x1ec7;n ch&#xed;nh s&#xe1;ch" type="java.lang.Object"/>
+                            <Column editable="true" title="L&#x1edb;p SH" type="java.lang.Object"/>
+                            <Column editable="true" title="Khoa" type="java.lang.Object"/>
+                            <Column editable="true" title="Gi&#x1edb;i T&#xed;nh" type="java.lang.Object"/>
+                            <Column editable="true" title="S&#x110;T" type="java.lang.Object"/>
+                            <Column editable="true" title="Email" type="java.lang.Object"/>
+                            <Column editable="true" title="Ng&#xe0;y Sinh" type="java.lang.Object"/>
+                            <Column editable="true" title="&#x110;&#x1ed1;i T&#x1b0;&#x1ee3;ng" type="java.lang.Object"/>
+                            <Column editable="true" title="N&#x103;m H&#x1ecd;c" type="java.lang.Object"/>
+                            <Column editable="true" title="Ghi Ch&#xfa;" type="java.lang.Object"/>
                           </Table>
                         </Property>
-                        <Property name="toolTipText" type="java.lang.String" value=""/>
-                        <Property name="autoResizeMode" type="int" value="4"/>
                         <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
                           <TableColumnModel selectionModel="0">
+                            <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                              <Title/>
+                              <Editor/>
+                              <Renderer/>
+                            </Column>
+                            <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                              <Title/>
+                              <Editor/>
+                              <Renderer/>
+                            </Column>
+                            <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                              <Title/>
+                              <Editor/>
+                              <Renderer/>
+                            </Column>
                             <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
                               <Title/>
                               <Editor/>
@@ -378,7 +393,7 @@
                                   <Component id="chucvuComboBox" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace pref="15" max="32767" attributes="0"/>
+                          <EmptySpace pref="101" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="jButton2" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jButton1" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -513,7 +528,7 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jScrollPane1" pref="497" max="32767" attributes="0"/>
+                          <Component id="jScrollPane1" pref="583" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>

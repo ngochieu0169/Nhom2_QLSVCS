@@ -39,8 +39,9 @@ public class admin extends javax.swing.JFrame {
         
         defaultTableModel.addColumn("Tài Khoản");
         defaultTableModel.addColumn("Mật Khẩu");
-        defaultTableModel.addColumn("Tên Sinh Viên");
+        defaultTableModel.addColumn("Tên Sinh Viên");        
         defaultTableModel.addColumn("Ngày Sinh");
+        defaultTableModel.addColumn("Cmnd");
         defaultTableModel.addColumn("Email");
         defaultTableModel.addColumn("SDT");      
         defaultTableModel.addColumn("Địa chỉ");
@@ -52,7 +53,7 @@ public class admin extends javax.swing.JFrame {
     }
      private void setBookTableData(List<Users> uSers_l){
         for(Users use : uSers_l){
-            defaultTableModel.addRow(new Object[]{use.getTk(), use.getMk(), use.getHoten(), use.getNgaySinh(), 
+            defaultTableModel.addRow(new Object[]{use.getTk(), use.getMk(), use.getHoten(), use.getNgaySinh(), use.getCmnd(),
                 use.geteMail(), use.getSDT(), use.getDiachi(),use.getTenchucvu(), use.getTinhtrang(), use.getNgaydangki()});
         }
     }

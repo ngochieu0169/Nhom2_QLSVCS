@@ -33,7 +33,6 @@ public class SuaUssers extends javax.swing.JFrame {
         ngaysinh_TextField.setText(users.getNgaySinh());
         cmnd_TextField.setText(users.getCmnd());
         sdt_TextField.setText(users.getSDT());
-        email_TextField.setText(users.geteMail());
         diachi_TextField.setText(users.getDiachi());
         email_TextField.setText(users.geteMail());
         chucvu_TextField.setText(users.getTenchucvu());
@@ -286,18 +285,21 @@ public class SuaUssers extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+        new admin().setVisible(true);
+        this.setVisible(false);
      
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void sua_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sua_ButtonActionPerformed
         // TODO add your handling code here:
       
-        users.setTk(mk_TextField.getText());
-        users.setMk(hoten_TextField.getText());
-        users.setHoten(ngaysinh_TextField.getText());
-        users.setNgaySinh(cmnd_TextField.getText());
-        users.setCmnd(sdt_TextField.getText());
-        users.setSDT(email_TextField.getText());
+       
+        users.setTk(tk_TextField.getText());
+        users.setMk(mk_TextField.getText());
+        users.setHoten(hoten_TextField.getText());
+        users.setNgaySinh(ngaysinh_TextField.getText());
+        users.setCmnd(cmnd_TextField.getText());
+        users.setSDT(sdt_TextField.getText());
         users.setDiachi(diachi_TextField.getText());
         users.seteMail(email_TextField.getText());
         users.setTenchucvu(chucvu_TextField.getText());

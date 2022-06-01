@@ -14,8 +14,6 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.List;
-import java.util.Vector;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
@@ -30,6 +28,7 @@ public class home extends javax.swing.JFrame {
     
     SinhVienDao dao = new SinhVienDao();
     String strFind = "";
+    String srtTK ="";
     /**
      * Creates new form home
      */
@@ -37,7 +36,10 @@ public class home extends javax.swing.JFrame {
     public home(){
         initComponents();
         hometk();
+        tkComboBox();
     }
+    
+    
     public void hometk() {
         DefaultTableModel tbModel = (DefaultTableModel) table_SinhVien1.getModel();
         tbModel.setRowCount(0);//Xóa data Trong table
@@ -58,6 +60,26 @@ public class home extends javax.swing.JFrame {
         }
         
     }
+    
+    public void tkComboBox(){
+          DefaultTableModel tbModel = (DefaultTableModel) table_SinhVien1.getModel();
+        tbModel.setRowCount(0);//Xóa data Trong table
+        for(SinhVien st : dao.getfindSVByDT(srtTK)){
+            Object dataRow[] = new Object[11];
+            dataRow[0] = st.getMaSV();
+            dataRow[1] = st.getTenSV();
+            dataRow[2] = st.getLopSH();
+            dataRow[3] = st.getKhoa();
+            dataRow[4] = st.getGioiTinh();
+            dataRow[5] = st.getSDT();
+            dataRow[6] = st.geteMail();
+            dataRow[7] = st.getNgaySinh();
+            dataRow[8] = st.getDoiTuong();
+            dataRow[9] = st.getNamHoc();
+            dataRow[10] = st.getGhiChu();  
+            tbModel.addRow(dataRow);
+        }
+    }
 
 
     /**
@@ -75,9 +97,9 @@ public class home extends javax.swing.JFrame {
         textboxsearch = new javax.swing.JTextField();
         jLabel27 = new javax.swing.JLabel();
         timkiem_Button = new javax.swing.JButton();
-        jComboBox = new javax.swing.JComboBox<>();
+        doiTuong_ComboBox = new javax.swing.JComboBox<>();
         jLabel28 = new javax.swing.JLabel();
-        jScrollPane5 = new javax.swing.JScrollPane();
+        jScrollPane2 = new javax.swing.JScrollPane();
         table_SinhVien1 = new javax.swing.JTable();
         jPanel4 = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
@@ -99,6 +121,7 @@ public class home extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setFont(new java.awt.Font("Times New Roman", 0, 10)); // NOI18N
 
         jPanel3.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jPanel3.addAncestorListener(new javax.swing.event.AncestorListener() {
@@ -126,25 +149,25 @@ public class home extends javax.swing.JFrame {
             }
         });
 
-        jComboBox.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        jComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Hộ nghèo", "Hộ cận nghèo", "Con Thương binh liệt sĩ", "Mồ côi ", "Con Cb,Cn,Vc tai nạn lao động", "Khuyết tật", "Hoàn cảnh khó khắn", "Dân tộc thiểu số  " }));
+        doiTuong_ComboBox.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        doiTuong_ComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Hộ nghèo", "Hộ cận nghèo", "Con Thương binh liệt sĩ", "Mồ côi", "Con Cb", "Cn", "Vc tai nạn lao động", "Khuyết tật", "Hoàn cảnh khó khắn", "Dân tộc thiểu số" }));
 
         jLabel28.setFont(new java.awt.Font("Times New Roman", 1, 20)); // NOI18N
         jLabel28.setForeground(new java.awt.Color(51, 51, 255));
         jLabel28.setText("Lọc theo danh mục:");
 
-        table_SinhVien1.setFont(new java.awt.Font("Times New Roman", 0, 20)); // NOI18N
         table_SinhVien1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-
+                {null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "Mã sv", "Họ Tên", "Lớp", "Diện chính sách"
+                "Mã SV", "Họ Tên", "Lớp SH", "Khoa", "Giới Tính", "SĐT", "Email", "Ngày Sinh", "Đối Tượng", "Năm Học", "Ghi Chú"
             }
         ));
-        table_SinhVien1.setToolTipText("");
-        table_SinhVien1.setAutoResizeMode(javax.swing.JTable.AUTO_RESIZE_ALL_COLUMNS);
-        jScrollPane5.setViewportView(table_SinhVien1);
+        jScrollPane2.setViewportView(table_SinhVien1);
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -159,12 +182,11 @@ public class home extends javax.swing.JFrame {
                         .addGap(31, 31, 31)))
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(textboxsearch, javax.swing.GroupLayout.DEFAULT_SIZE, 353, Short.MAX_VALUE)
-                    .addComponent(jComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(doiTuong_ComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(42, 42, 42)
                 .addComponent(timkiem_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(355, Short.MAX_VALUE))
-            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 1106, Short.MAX_VALUE))
+            .addComponent(jScrollPane2)
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -174,16 +196,13 @@ public class home extends javax.swing.JFrame {
                     .addComponent(textboxsearch, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel27)
                     .addComponent(timkiem_Button))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel28)
-                    .addComponent(jComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(340, 340, 340))
-            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                    .addContainerGap(217, Short.MAX_VALUE)
-                    .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addComponent(doiTuong_ComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(29, 29, 29)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 296, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(144, 144, 144))
         );
 
         jTabbedPane1.addTab("HOME", new javax.swing.ImageIcon(getClass().getResource("/image/navigator.png")), jPanel3); // NOI18N
@@ -284,7 +303,7 @@ public class home extends javax.swing.JFrame {
                             .addComponent(jPasswordField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addComponent(chucvuComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 15, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 101, Short.MAX_VALUE)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton2)
                     .addComponent(jButton1))
@@ -313,7 +332,7 @@ public class home extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 497, Short.MAX_VALUE))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 583, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("GIỚI THIỆU", new javax.swing.ImageIcon(getClass().getResource("/image/contact-list.png")), jPanel2); // NOI18N
@@ -433,8 +452,18 @@ public class home extends javax.swing.JFrame {
 
     private void timkiem_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_timkiem_ButtonActionPerformed
         // TODO add your handling code here:
-        strFind = textboxsearch.getText();
-        hometk();
+        
+         if (textboxsearch.getText().equals("") )
+         {
+             srtTK = String.valueOf(doiTuong_ComboBox.getSelectedItem());
+             tkComboBox();
+         }
+        else
+         {
+            strFind = textboxsearch.getText();
+            hometk();
+         }
+        
     }//GEN-LAST:event_timkiem_ButtonActionPerformed
 
     /**
@@ -472,9 +501,9 @@ public class home extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<String> chucvuComboBox;
+    private javax.swing.JComboBox<String> doiTuong_ComboBox;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JComboBox<String> jComboBox;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel27;
@@ -492,7 +521,7 @@ public class home extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPasswordField jPasswordField;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane5;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextField jTextField_User;

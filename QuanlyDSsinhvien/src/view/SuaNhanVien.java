@@ -36,10 +36,11 @@ public class SuaNhanVien extends javax.swing.JFrame {
         hoTen_TextField.setText(String.valueOf(sinhVien.getTenSV()));
         lopSH_TextField.setText(String.valueOf(sinhVien.getLopSH()));
         khoa_TextField.setText(String.valueOf(sinhVien.getKhoa()));
+       
         sdt_TextField.setText(String.valueOf(sinhVien.getSDT()));
         email_TextField.setText(String.valueOf(sinhVien.geteMail()));
         doituong_TextField.setText(String.valueOf(sinhVien.getDoiTuong()));
-        namhoc_TextField.setText(String.valueOf(sinhVien.geteMail()));
+        namhoc_TextField.setText(String.valueOf(sinhVien.getNamHoc()));
         ghichu_TextField.setText(String.valueOf(sinhVien.getGhiChu()));
         
         
@@ -70,7 +71,6 @@ public class SuaNhanVien extends javax.swing.JFrame {
         sdt_TextField = new javax.swing.JTextField();
         email_TextField = new javax.swing.JTextField();
         sua_Button = new javax.swing.JButton();
-        xoa_Button = new javax.swing.JButton();
         doituong_TextField = new javax.swing.JTextField();
         namhoc_TextField = new javax.swing.JTextField();
         ghichu_TextField = new javax.swing.JTextField();
@@ -100,14 +100,6 @@ public class SuaNhanVien extends javax.swing.JFrame {
         sua_Button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 sua_ButtonActionPerformed(evt);
-            }
-        });
-
-        xoa_Button.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/xoa.png"))); // NOI18N
-        xoa_Button.setText("XOÁ");
-        xoa_Button.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                xoa_ButtonActionPerformed(evt);
             }
         });
 
@@ -150,17 +142,16 @@ public class SuaNhanVien extends javax.swing.JFrame {
                             .addComponent(email_TextField)
                             .addComponent(doituong_TextField)
                             .addComponent(namhoc_TextField)))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(sua_Button)
-                        .addGap(141, 141, 141)
-                        .addComponent(xoa_Button)
-                        .addGap(235, 235, 235))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(ghichu_TextField, javax.swing.GroupLayout.PREFERRED_SIZE, 701, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(sua_Button)
+                .addGap(345, 345, 345))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -200,11 +191,9 @@ public class SuaNhanVien extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(ghichu_TextField, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(33, 33, 33)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(sua_Button)
-                    .addComponent(xoa_Button))
-                .addContainerGap(148, Short.MAX_VALUE))
+                .addGap(32, 32, 32)
+                .addComponent(sua_Button)
+                .addContainerGap(149, Short.MAX_VALUE))
         );
 
         jButton5.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
@@ -267,12 +256,10 @@ public class SuaNhanVien extends javax.swing.JFrame {
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
+        new nhanvien().setVisible(true);
+        this.setVisible(false);
         
     }//GEN-LAST:event_jButton5ActionPerformed
-
-    private void xoa_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_xoa_ButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_xoa_ButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -301,6 +288,5 @@ public class SuaNhanVien extends javax.swing.JFrame {
     private javax.swing.JTextField namhoc_TextField;
     private javax.swing.JTextField sdt_TextField;
     private javax.swing.JButton sua_Button;
-    private javax.swing.JButton xoa_Button;
     // End of variables declaration//GEN-END:variables
 }
